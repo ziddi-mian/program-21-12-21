@@ -35,3 +35,25 @@ console.log(day_of_the_month(d));
 
 d= new Date(2015, 10, 1);
 console.log(day_of_the_month(d));
+
+
+// . Write a JavaScript function to get a textual representation of a day (three letters, Mon through Sun).   
+// Test Data :
+// dt = new Date(2015, 10, 1);
+// console.log(short_Days(dt));
+// "Sun"
+
+
+Date.shortDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+function short_Days(dt)
+{ 
+   return Date.shortDays[dt.getDay()];
+}
+
+dt = new Date();
+console.log(short_Days(dt));
+
+dt = new Date(2015, 10, 1);
+console.log(short_Days(dt));
+
